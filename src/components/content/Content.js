@@ -21,6 +21,7 @@ function Content() {
         </Col>
         <Col></Col>
       </Row>
+      
     </Container>
   )
 }

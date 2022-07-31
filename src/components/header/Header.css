@@ -28,15 +28,20 @@
     grid-gap: 50px;
     list-style-type: none;
     padding-top: 25px;
+    text-decoration: none;
 
   }
   .mobile-option {
     display: none;
   }
   
-  .option :hover {
-    color: white;
+  .option a{
+    color: #cfd2d6;
+    text-decoration: none;
   }
+  .option :hover {
+    color: #27bcda;  }
+ 
   .signin-up {
     display: flex;
     padding: 0px 5px;

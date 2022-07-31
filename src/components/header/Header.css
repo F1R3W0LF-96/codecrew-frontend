@@ -27,6 +27,8 @@
     grid-template-columns: repeat(3, auto);
     grid-gap: 50px;
     list-style-type: none;
+    padding-top: 25px;
+
   }
   .mobile-option {
     display: none;

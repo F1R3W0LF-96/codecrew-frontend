@@ -11,7 +11,7 @@ function Content() {
   return (
     <Container>
       <Row>
-        <Col>1 of 3</Col>
+        <Col></Col>
         <Col xs={8}>
         <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -19,7 +19,7 @@ function Content() {
       </Routes>
 
         </Col>
-        <Col>3 of 3</Col>
+        <Col></Col>
       </Row>
     </Container>
   )

@@ -9,7 +9,7 @@ export default function Login({ setExistingUser }) {
                 <p class="card-text">
                     <input type="text" class="form-control" id="username" placeholder="Username" />
                     <input type="password" class="form-control" id="password" placeholder="Password" /><br/>
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-primary" onClick={()=>window.location.href="/home"}>Login</button>
                     <a onClick={()=>setExistingUser(false)} >Sign Up ?</a>
 
                 </p>

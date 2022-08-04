@@ -20,7 +20,9 @@ function Content() {
           <Route path="/home" element={<ComponentWithHeaderFooter>
             <LandingPage />
           </ComponentWithHeaderFooter>} />
-          <Route path="/videoblog" element={<VideoBlog />} />
+          <Route path="/videoblog" element={<ComponentWithHeaderFooter>
+            <VideoBlog />
+          </ComponentWithHeaderFooter>} />
         </Routes>
 
     </Row>

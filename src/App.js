@@ -13,9 +13,7 @@ function App() {
     <BrowserRouter>
 
       <div className="App">
-        <Header />
         <Content />
-        <Footer />
 
       </div>
     </BrowserRouter>

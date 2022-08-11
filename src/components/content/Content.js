@@ -9,21 +9,25 @@ import VideoBlog from '../videoblog/VideoBlog';
 import Main from '../loginSignup/Main';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
+import AdminCreateContent from '../admin/AdminCreateContent';
 
 function Content() {
   return (
     <Row>
-    
-        <Routes>
-          <Route path="/" element={<Main />} />
 
-          <Route path="/home" element={<ComponentWithHeaderFooter>
-            <LandingPage />
-          </ComponentWithHeaderFooter>} />
-          <Route path="/videoblog" element={<ComponentWithHeaderFooter>
-            <VideoBlog />
-          </ComponentWithHeaderFooter>} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/adminSection" element={<ComponentWithHeaderFooter>
+          <AdminCreateContent />
+        </ComponentWithHeaderFooter>} />
+
+        <Route path="/home" element={<ComponentWithHeaderFooter>
+          <LandingPage />
+        </ComponentWithHeaderFooter>} />
+        <Route path="/videoblog" element={<ComponentWithHeaderFooter>
+          <VideoBlog />
+        </ComponentWithHeaderFooter>} />
+      </Routes>
 
     </Row>
 
@@ -33,11 +37,14 @@ function Content() {
 const ComponentWithHeaderFooter = (props) => (
   <div>
     <Header />
-    <Col></Col>
-      <Col xs={8}>
-    {props.children}
-    </Col>
-    <Col></Col>
+    <Row>
+
+      <Col ></Col>
+      <Col xs={8} style={{ minHeight: "100vh" }}>
+        {props.children}
+      </Col>
+      <Col></Col>
+    </Row>
     <Footer />
   </div>
 );

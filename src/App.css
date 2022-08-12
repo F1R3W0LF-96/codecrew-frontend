@@ -2,6 +2,8 @@
   text-align: center;
   font-family: 'Permanent Marker', cursive;
   overflow-x:hidden !important;
+  overflow-y:hidden !important;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -38,3 +40,27 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #586269 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 13px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #586269;
+    border-radius: 9px;
+    border: 2px groove #ffffff;
+  }

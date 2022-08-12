@@ -116,13 +116,12 @@ function VideoBlog() {
     return (
         <div>
             {
-                loading ? <Loader /> : <Container>
+                loading ? <Loader /> : 
                     <Row>
                         <h1>Video Blog</h1>
                         {renderVideos()}
 
                     </Row>
-                </Container>
             }
 
         </div>

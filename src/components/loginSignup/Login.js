@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import backgroundImage from "../../assets/Technical.jpeg";
-import "./main.css";
+import "./login.css";
 
 export default function Login({ setExistingUser }) {
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
 
-  const [showLoginForm, setShowLoginForm] = useState(false);
+  const [showLoginForm , setShowLoginForm] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,9 +39,7 @@ export default function Login({ setExistingUser }) {
       <div class="blueBg">
         <div class="box signin">
           <h2>Already Have an Account?</h2>
-          <button class="signinBtn" onClick={() => setShowLoginForm(true)}>
-            Sign In
-          </button>
+          <button class="signinBtn" onClick={()=>setShowLoginForm(true)}>Sign In</button>
         </div>
         <div class="box signup">
           <h2>Don't Have an Account?</h2>
@@ -50,35 +48,34 @@ export default function Login({ setExistingUser }) {
           </button>
         </div>
       </div>
-      {showLoginForm && (
-        <div class="formBx">
-          <div class="form signinForm">
-            <form>
-              <h3>Sign In</h3>
-              <input
-                type="text"
-                placeholder="Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <input
-                type="submit"
-                value="login"
-                onClick={(e) => handleSubmit(e)}
-              />
-              <a href="/" class="forgot">
-                Forgot Password?
-              </a>
-            </form>
-          </div>
+      {showLoginForm &&   <div class="formBx">
+        <div class="form signinForm">
+          <form>
+            <h3>Sign In</h3>
+            <input
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <input
+              type="submit"
+              value="login"
+              onClick={(e) => handleSubmit(e)}
+            />
+            <a href="/" class="forgot">
+              Forgot Password?
+            </a>
+          </form>
         </div>
-      )}
+      </div>}
+    
     </div>
   );
 }

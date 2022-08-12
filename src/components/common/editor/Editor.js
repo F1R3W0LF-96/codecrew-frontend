@@ -32,6 +32,7 @@ function ContentEditor() {
         onEditorStateChange={onEditorStateChange}
         placeholder="hello placeholder"
       />
+      
     </div>
   )
 }

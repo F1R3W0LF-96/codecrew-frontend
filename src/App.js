@@ -11,7 +11,6 @@ function App() {
 
       <div className="App">
         <Favicon url={favIcon} iconSize={40} animated={true} />
-
         <Content />
       </div>
     </BrowserRouter>

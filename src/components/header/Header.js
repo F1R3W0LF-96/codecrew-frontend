@@ -11,7 +11,7 @@ const Header = () => {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
   return (
-    <div className="header">
+    <div className="header mb-5">
       <div className="logo-nav">
         <div className="logo-container">
           <a href="#">
@@ -34,20 +34,19 @@ const Header = () => {
           </li>
           <li className="option mobile-option" onClick={closeMobileMenu}>
             <NavLink to="/">SIGN UP</NavLink>
-
           </li>
         </ul>
       </div>
-      <ul className="signin-up">
-        <li className="sign-in" onClick={closeMobileMenu}>
-          <a href="#">SIGN-IN</a>
-        </li>
-        <li onClick={closeMobileMenu}>
-          <a href="" className="signup-btn">
-            SIGN-UP
-          </a>
-        </li>
-      </ul>
+        <ul className="signin-up">
+          <li className="sign-in" onClick={closeMobileMenu}>
+            <a href="#">SIGN-IN</a>
+          </li>
+          <li onClick={closeMobileMenu}>
+            <a href="" className="signup-btn">
+              SIGN-UP
+            </a>
+          </li>
+        </ul>
       <div className="mobile-menu" onClick={handleClick}>
         {click ? (
           <CloseMenu className="menu-icon" />

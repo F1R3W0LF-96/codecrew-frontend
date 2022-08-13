@@ -32,7 +32,16 @@ function ContentEditor() {
         onEditorStateChange={onEditorStateChange}
         placeholder="hello placeholder"
       />
+      <textarea
+        disabled
+        value={description.htmlValue}
       
+      >
+      </textarea>
+     <button onClick={() => {
+        console.log(description.htmlValue);
+      } }>click me 
+      </button>
     </div>
   )
 }

@@ -26,6 +26,7 @@ const Header = () => {
           <li className="option" onClick={closeMobileMenu}>
             <NavLink to="/">CONTACT</NavLink>
           </li>
+         
           <li className="option" onClick={closeMobileMenu}>
             <NavLink to="/videoblog">VIDEO BLOG</NavLink>
           </li>
@@ -34,6 +35,9 @@ const Header = () => {
           </li>
           <li className="option mobile-option" onClick={closeMobileMenu}>
             <NavLink to="/">SIGN UP</NavLink>
+          </li>
+          <li className="option" onClick={closeMobileMenu}>
+            <NavLink to="/adminSection">Content Admin</NavLink>
           </li>
         </ul>
       </div>

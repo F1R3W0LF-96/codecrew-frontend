@@ -8,7 +8,6 @@ import favIcon from "../src/assets/hacker.png"
 function App() {
   return (
     <BrowserRouter>
-
       <div className="App">
         <Favicon url={favIcon} iconSize={40} animated={true} />
         <Content />

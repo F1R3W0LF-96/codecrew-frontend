@@ -24,7 +24,7 @@
 .nav-options {
   padding-left: 25px;
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   grid-gap: 50px;
   list-style-type: none;
   padding-top: 25px;
@@ -53,7 +53,7 @@ a:hover {
 .signin-up {
   display: flex;
   list-style-type: none;
-  margin-left : 53%
+  margin-left : 35%
 }
 .sign-in {
   padding-right: 50px;
@@ -97,13 +97,16 @@ a:hover {
     grid-gap: 0px;
   }
   .nav-options.active {
-    background: #9899d1;
+    background: #5D676F;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
     align-content: center;
     padding-left: 0px;
+    min-height: 100% !important;
+    margin-top: 20px;
+
   }
 
   .menu-icon {

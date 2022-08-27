@@ -3,7 +3,7 @@ import Login from './Login';
 import "./main.css"
 import SignUp from './SignUp';
 
-function Main() {
+const Main=()=> {
     const [existingUser, setExistingUser] = React.useState(true);
     return (
         <div className='login-container'>

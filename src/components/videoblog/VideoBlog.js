@@ -74,7 +74,7 @@ Shops in McLeod Ganj cater to the varied taste of its many visitors, who wish to
     },
 
 ]
-function VideoBlog() {
+const VideoBlog = () => {
 
     const [loading, setLoading] = useState(true);
 
@@ -116,7 +116,7 @@ function VideoBlog() {
     return (
         <div>
             {
-                loading ? <Loader /> : 
+                loading ? <Loader /> :
                     <Row>
                         <h1>Video Blog</h1>
                         {renderVideos()}

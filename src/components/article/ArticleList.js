@@ -33,7 +33,6 @@ function ArticleList() {
         let clonnedData = [...articleList];
         const order = (sortingData.column === column &&sortingData.order === sortOrder.ASEC) ? sortOrder.DESC : sortOrder.ASEC
         clonnedData = sortData(clonnedData, column, order);
-        debugger
         SetArticleList(clonnedData);
         SetSortingData({
             ...sortingData,
@@ -92,7 +91,7 @@ function ArticleList() {
                                     {article.description}
                                 </td>
                                 <td>
-                                    <Button>
+                                    <Button onClick={()=>window.location.href=`${/article/}${article.title}`}>
                                         Navigate
                                     </Button>
                                 </td>

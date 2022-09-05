@@ -23,7 +23,7 @@ const Article=(props)=> {
   return (
     <>
  { articleDetail&& 
-       <div dangerouslySetInnerHTML={{__html: "<p>Your html code here.<p>"}} />
+       <div dangerouslySetInnerHTML={{__html: `${articleDetail.body}`}} />
       }
     </>
   )

@@ -6,6 +6,7 @@ import Article from '../article/Article';
 import ArticleList from '../article/ArticleList';
 import Footer from '../footer/Footer';
 import Header from '../header/Header';
+import HelpSupport from '../helpSupport/HelpSupport';
 import LandingPage from '../landingPage/LandingPage';
 import Main from '../loginSignup/Main';
 import VideoBlog from '../videoblog/VideoBlog';
@@ -33,7 +34,11 @@ function AppRoutes() {
         <Route path="/article/:articleName" element={<ComponentWithHeaderFooter>
           <Article />
         </ComponentWithHeaderFooter>} />
+        <Route path="/help-support" element={<ComponentWithHeaderFooter>
+          <HelpSupport />
+        </ComponentWithHeaderFooter>} />
       </Routes>
+      
     </Row>
   )
 }

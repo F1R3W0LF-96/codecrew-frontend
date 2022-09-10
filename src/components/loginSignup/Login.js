@@ -14,7 +14,7 @@ export default function Login({ setExistingUser }) {
     if (username === "admin" && password === "admin") {
       window.location.href = "/adminSection";
     } else {
-      window.location.href = "/home";
+      window.location.href = "/";
     }
   };
 

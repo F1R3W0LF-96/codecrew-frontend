@@ -1,0 +1,13 @@
+.chat-main{
+    background-color:#F0F2F5;
+    /* max-height: 80vh; */
+   
+
+}
+.contact-list{
+    height: 600px;
+    overflow-y: scroll;
+}
+.contacts{
+    background-color: #F5F6F6;
+}

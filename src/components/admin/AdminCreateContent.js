@@ -7,7 +7,7 @@ import Colorpicker from '../common/colorPicker/Colorpicker';
 import Editor from '../common/editor/Editor';
 
 
-function AdminCreateContent() {
+const AdminCreateContent=()=> {
 
     return (
         <div>AdminCreateContent

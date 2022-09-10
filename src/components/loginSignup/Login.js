@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import backgroundImage from "../../assets/Technical.jpeg";
 import "./login.css";
+import { GoogleLogin } from 'react-google-login';
+
 
 export default function Login({ setExistingUser }) {
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
 
-  const [showLoginForm , setShowLoginForm] = useState(false)
+  const [showLoginForm, setShowLoginForm] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,6 +19,9 @@ export default function Login({ setExistingUser }) {
       window.location.href = "/";
     }
   };
+  const responseGoogle = (response) => {
+    console.log(response);
+  }
 
   return (
     // <div class="card login" style={{ width: "18rem" }}>
@@ -39,7 +44,7 @@ export default function Login({ setExistingUser }) {
       <div class="blueBg">
         <div class="box signin">
           <h2>Already Have an Account?</h2>
-          <button class="signinBtn" onClick={()=>setShowLoginForm(true)}>Sign In</button>
+          <button class="signinBtn" onClick={() => setShowLoginForm(true)}>Sign In</button>
         </div>
         <div class="box signup">
           <h2>Don't Have an Account?</h2>
@@ -48,7 +53,7 @@ export default function Login({ setExistingUser }) {
           </button>
         </div>
       </div>
-      {showLoginForm &&   <div class="formBx">
+      {showLoginForm && <div class="formBx">
         <div class="form signinForm">
           <form>
             <h3>Sign In</h3>
@@ -69,13 +74,20 @@ export default function Login({ setExistingUser }) {
               value="login"
               onClick={(e) => handleSubmit(e)}
             />
+            <GoogleLogin
+              clientId="173588754969-09mjlifdr62i30c1p5cg1a2la5rh084h.apps.googleusercontent.com"
+              buttonText="Login"
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
+              cookiePolicy={'single_host_origin'}
+            />
             <a href="/" class="forgot">
               Forgot Password?
             </a>
           </form>
         </div>
       </div>}
-    
+
     </div>
   );
 }

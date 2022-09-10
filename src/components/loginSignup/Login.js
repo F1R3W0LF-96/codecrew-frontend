@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import backgroundImage from "../../assets/Technical.jpeg";
 import "./login.css";
-import { GoogleLogin } from 'react-google-login';
+import { GoogleLogin,googleLogout } from '@react-oauth/google';
 
 
 export default function Login({ setExistingUser }) {
@@ -75,11 +75,12 @@ export default function Login({ setExistingUser }) {
               onClick={(e) => handleSubmit(e)}
             />
             <GoogleLogin
-              clientId="173588754969-09mjlifdr62i30c1p5cg1a2la5rh084h.apps.googleusercontent.com"
-              buttonText="Login"
-              onSuccess={responseGoogle}
-              onFailure={responseGoogle}
-              cookiePolicy={'single_host_origin'}
+              onSuccess={credentialResponse => {
+                console.log(credentialResponse);
+              }}
+              onError={() => {
+                console.log('Login Failed');
+              }}
             />
             <a href="/" class="forgot">
               Forgot Password?

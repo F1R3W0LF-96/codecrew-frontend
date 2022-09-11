@@ -9,7 +9,7 @@ import Favicon from 'react-favicon';
 import favIcon from "../src/assets/hacker.png"
 function App() {
   return (
-    <GoogleOAuthProvider clientId="173588754969-09mjlifdr62i30c1p5cg1a2la5rh084h.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId="173588754969-afjs5v5th8a40rmm195purrrounv98pd.apps.googleusercontent.com">
 
     <BrowserRouter>
       <div className="App">

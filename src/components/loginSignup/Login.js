@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import backgroundImage from "../../assets/Technical.jpeg";
 import "./login.css";
 import { GoogleLogin,googleLogout } from '@react-oauth/google';
+import { parseGoogleJwtToken } from "../../helpers/HelperFunctions";
 
 
 export default function Login({ setExistingUser }) {
@@ -20,7 +21,8 @@ export default function Login({ setExistingUser }) {
     }
   };
   const responseGoogle = (response) => {
-    console.log(response);
+    let parsedData=parseGoogleJwtToken(response.credential)
+    console.log(parsedData);
   }
 
   return (
@@ -76,7 +78,7 @@ export default function Login({ setExistingUser }) {
             />
             <GoogleLogin
               onSuccess={credentialResponse => {
-                console.log(credentialResponse);
+                responseGoogle(credentialResponse);
               }}
               onError={() => {
                 console.log('Login Failed');
